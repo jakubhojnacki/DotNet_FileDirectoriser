@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Development\Visual Studio\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\
 FileDirectoriser
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Development\Visual Studio\FileDirectoriser\FileDirectoriser\App.xaml
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\App.xaml
 11407045341
-1-1606302853
-11766346613
+1-604888437
+16-366771737
 2031527207112
 MainWindow.xaml;
 
-True
+False
 

@@ -21,3 +21,26 @@ C:\Development\Visual Studio\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-
 C:\Development\Visual Studio\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\ref\FileDirectoriser.dll
 C:\Development\Visual Studio\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser_Content.g.cs
 C:\Development\Visual Studio\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.csproj.AssemblyReference.cache
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\App.g.cs
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser_Content.g.cs
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser_MarkupCompile.cache
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.dll
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\refint\FileDirectoriser.dll
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.pdb
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\bin\Debug\net6.0-windows\FileDirectoriser.exe
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\bin\Debug\net6.0-windows\FileDirectoriser.deps.json
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\bin\Debug\net6.0-windows\FileDirectoriser.runtimeconfig.json
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\bin\Debug\net6.0-windows\FileDirectoriser.dll
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\bin\Debug\net6.0-windows\FileDirectoriser.pdb
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser_MarkupCompile.lref
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.g.resources
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.AssemblyInfoInputs.cache
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.AssemblyInfo.cs
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.csproj.CoreCompileInputs.cache
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\FileDirectoriser.genruntimeconfig.cache
+C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\ref\FileDirectoriser.dll

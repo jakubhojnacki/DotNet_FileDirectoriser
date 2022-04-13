@@ -5,18 +5,27 @@
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
         <UseWindowsForms>true</UseWindowsForms>
-        <ApplicationIcon>Icon.ico</ApplicationIcon>
+        <ApplicationIcon>Resources\Images\Application.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="Icon.png" />
+        <None Remove="Resources\Images\Application.ico" />
+        <None Remove="Resources\Images\Application.png" />
+        <None Remove="Resources\Images\MessageTypeError.png" />
+        <None Remove="Resources\Images\MessageTypeInformation.png" />
+        <None Remove="Resources\Images\MessageTypeUnknown.png" />
+        <None Remove="Resources\Images\MessageTypeWarning.png" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="Icon.ico" />
+        <Content Include="Resources\Images\Application.ico" />
     </ItemGroup>
 
     <ItemGroup>
-        <Resource Include="Icon.png" />
+        <Resource Include="Resources\Images\Application.png" />
+        <Resource Include="Resources\Images\MessageTypeError.png" />
+        <Resource Include="Resources\Images\MessageTypeInformation.png" />
+        <Resource Include="Resources\Images\MessageTypeUnknown.png" />
+        <Resource Include="Resources\Images\MessageTypeWarning.png" />
     </ItemGroup>
 </Project>

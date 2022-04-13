@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FileDirectoriser" 
         d:DataContext="{d:DesignInstance Type=local:MainViewModel}"
         mc:Ignorable="d"
-        Title="File Directoriser" Height="512" Width="768" Icon="/Icon.png">
+        Title="File Directoriser" Height="512" Width="768" Icon="/Resources/Images/Application.png">
     <Window.Resources>
         <ControlTemplate x:Key="DirectoryPathBox" TargetType="TextBox">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 4 4 0">
@@ -29,6 +29,7 @@
             <Setter Property="Height" Value="24" />
             <Setter Property="Margin" Value="4 4 4 4" />
         </Style>
+        <local:MessageTypeImageConverter x:Key="MessageTypeImageConverter"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -57,13 +58,22 @@
                 local:IntegerBoxProperties.Decrease="{Binding DecreaseNoOfCharactersCommand}" 
                 local:IntegerBoxProperties.Increase="{Binding IncreaseNoOfCharactersCommand}" />
         </Grid>
-        <ListBox Grid.Row="1" Margin="4 4 4 0"/>
+        <ListBox Grid.Row="1" Margin="4 4 4 0" ItemsSource="{Binding Messages}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Height="16" Source="{Binding Type, Converter={StaticResource MessageTypeImageConverter}}" Margin="0 0 4 0" />
+                        <TextBlock Text="{Binding Text}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Width="24" Height="24" Margin="4 0 0 0" Source="/Icon.png"/>
+            <Image Grid.Column="0" Width="24" Height="24" Margin="4 0 0 0" Source="/Resources/Images/Application.png"/>
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right"  VerticalAlignment="Center">
                 <Button Style="{StaticResource ActionButton}" Command="{Binding RunCommand}">Run</Button>
                 <Button Style="{StaticResource ActionButton}" Command="{Binding StopCommand}">Stop</Button>

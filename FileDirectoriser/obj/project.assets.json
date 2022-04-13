@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\Visual Studio\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
+      "projectUniqueName": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
       "projectName": "FileDirectoriser",
-      "projectPath": "C:\\Development\\Visual Studio\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
+      "projectPath": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
       "packagesPath": "C:\\Users\\Jakub.Hojnacki\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\Visual Studio\\FileDirectoriser\\FileDirectoriser\\obj\\",
+      "outputPath": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jakub.Hojnacki\\AppData\\Roaming\\NuGet\\NuGet.Config",

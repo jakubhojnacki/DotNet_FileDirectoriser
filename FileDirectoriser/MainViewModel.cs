@@ -1,8 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace FileDirectoriser {
     public class MainViewModel : ViewModelBase {
         public MainModel Model { get; private set; }
+
         public string SourceDirectoryPath { 
             get { return this.Model.SourceDirectoryPath; } 
             set { this.Model.SourceDirectoryPath = value; this.TriggerPropertyChanged("SourceDirectoryPath"); } 
@@ -15,7 +18,12 @@ namespace FileDirectoriser {
             get { return this.Model.NoOfCharacters; } 
             set { this.Model.NoOfCharacters = value; this.TriggerPropertyChanged("NoOfCharacters"); } 
         }
+        public ObservableCollection<Message> Messages {
+            get { return this.Model.Messages; }
+            set { this.Model.Messages = value; this.TriggerPropertyChanged("Messages"); }
+        }
 
+        private Worker? Worker { get; set; }
         public bool Running { get; private set; }
 
         public RelayCommand RunCommand { get; }
@@ -28,7 +36,10 @@ namespace FileDirectoriser {
 
         public MainViewModel(MainModel? pModel = null) {
             this.Model = pModel != null ? pModel : new MainModel();
+
+            this.Worker = null;
             this.Running = false;
+
             this.RunCommand = new RelayCommand(this.OnRun, this.OnRunEnabled);
             this.StopCommand = new RelayCommand(this.OnStop, this.OnStopEnabled);
             this.ResetCommand = new RelayCommand(this.OnReset, this.OnResetEnabled);
@@ -39,7 +50,25 @@ namespace FileDirectoriser {
         }
 
         private void OnRun(object? pParameter = null) {
+            this.Messages.Clear();
+            this.Worker = new Worker(new Directoriser(this.SourceDirectoryPath, this.DestinationDirectoryPath, this.NoOfCharacters));
+            this.Worker.ProgressChanged += this.Worker_ProgressChanged;
+            this.Worker.RunWorkerCompleted += this.Worker_RunWorkerCompleted;
+            this.Worker.Start();
             this.Running = true;
+        }
+
+        private void Worker_ProgressChanged(object? pSender, ProgressChangedEventArgs pEventArgs) {
+            if (pEventArgs.UserState != null)
+                this.Messages.Add((Message)pEventArgs.UserState);
+        }
+
+        private void Worker_RunWorkerCompleted(object? pSender, RunWorkerCompletedEventArgs pEventArgs) {
+            if (this.Worker != null) {     
+                this.Worker.Dispose();
+                this.Worker = null;
+            }
+            this.Running = false;
         }
 
         private bool OnRunEnabled(object? pParameter = null) {
@@ -47,6 +76,11 @@ namespace FileDirectoriser {
         }
 
         private void OnStop(object? pParameter = null) {
+            if (this.Worker != null) {
+                this.Worker.Stop();
+                this.Worker.Dispose();
+                this.Worker = null;
+            }
             this.Running = false;
         }
 
@@ -58,6 +92,7 @@ namespace FileDirectoriser {
             this.SourceDirectoryPath = string.Empty;
             this.DestinationDirectoryPath = string.Empty;
             this.NoOfCharacters = MainModel.DefaultNoOfCharacters;
+            this.Messages.Clear();
         }
 
         private bool OnResetEnabled(object? pParameter = null) {
@@ -65,10 +100,7 @@ namespace FileDirectoriser {
         }
 
         private void OnSelectSourceDirectoryCommand(object? pParameter = null) {
-            FolderBrowserDialog FolderBrowserDialog = new FolderBrowserDialog();
-            FolderBrowserDialog.SelectedPath = this.SourceDirectoryPath;
-            if (FolderBrowserDialog.ShowDialog() == DialogResult.OK)
-                this.SourceDirectoryPath = FolderBrowserDialog.SelectedPath;
+            this.SourceDirectoryPath = MainViewModel.SelectDirectoryPath(this.SourceDirectoryPath);
         }
 
         private bool OnSelectSourceDirectoryCommandEnabled(object? pParameter = null) {
@@ -76,10 +108,7 @@ namespace FileDirectoriser {
         }
 
         private void OnSelectDestinationDirectoryCommand(object? pParameter = null) {
-            FolderBrowserDialog FolderBrowserDialog = new FolderBrowserDialog();
-            FolderBrowserDialog.SelectedPath = this.DestinationDirectoryPath;
-            if (FolderBrowserDialog.ShowDialog() == DialogResult.OK)
-                this.DestinationDirectoryPath = FolderBrowserDialog.SelectedPath;
+            this.DestinationDirectoryPath = MainViewModel.SelectDirectoryPath(this.DestinationDirectoryPath);
         }
 
         private bool OnSelectDestinationDirectoryCommandEnabled(object? pParameter = null) {
@@ -101,6 +130,16 @@ namespace FileDirectoriser {
 
         private bool OnIncreaseNoOfCharactersCommandEnabled(object? pParameter = null) {
             return !this.Running;
+        }
+
+        private static string SelectDirectoryPath(string pDirectoryPath)
+        {
+            string DirectoryPath = pDirectoryPath;
+            FolderBrowserDialog FolderBrowserDialog = new FolderBrowserDialog();
+            FolderBrowserDialog.SelectedPath = pDirectoryPath;
+            if (FolderBrowserDialog.ShowDialog() == DialogResult.OK)
+                DirectoryPath = FolderBrowserDialog.SelectedPath;
+            return DirectoryPath;
         }
     }
 }

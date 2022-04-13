@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l4oPCVDCcdKYJDj6Bw1fUsfKSVGr4ysVWlT/yn/OqMzhgXotAPXUH9i09hX/v9Nwu91ztAYJkEsnpKOSoPLeCw==",
+  "dgSpecHash": "43APomh09GRTXmfWSscxcU6E066PjgdwjkXa4GXRB4LDBpkCKSrRfaDTX98v0e2IV2AbwEZkz3YuWl4LUkZg9w==",
   "success": true,
-  "projectFilePath": "C:\\Development\\Visual Studio\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
+  "projectFilePath": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
