@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 
-namespace FileDirectoriser {
+namespace Fortah.FileDirectoriser.UI {
     public class DirectoryPathBoxProperties : DependencyObject {
         public static readonly DependencyProperty SelectProperty = DependencyProperty.RegisterAttached("Select",
             typeof(ICommand), typeof(DirectoryPathBoxProperties), new PropertyMetadata(default(ICommand)));

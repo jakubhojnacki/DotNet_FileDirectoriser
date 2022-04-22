@@ -14,7 +14,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
-      "projectName": "FileDirectoriser",
+      "projectName": "Fortah.FileDirectoriser",
       "projectPath": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\FileDirectoriser.csproj",
       "packagesPath": "C:\\Users\\Jakub.Hojnacki\\.nuget\\packages\\",
       "outputPath": "C:\\Development\\DotNet\\FileDirectoriser\\FileDirectoriser\\obj\\",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

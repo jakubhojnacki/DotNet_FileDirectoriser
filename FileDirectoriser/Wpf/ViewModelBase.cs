@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace FileDirectoriser {
+namespace Fortah.FileDirectoriser.WPF {
     public abstract class ViewModelBase : INotifyPropertyChanged {
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void TriggerPropertyChanged(string pPropertyName) {

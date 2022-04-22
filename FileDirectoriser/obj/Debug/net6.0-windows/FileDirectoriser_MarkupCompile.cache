@@ -1,20 +1,20 @@
 ﻿FileDirectoriser
-
+2.0.0.0
 
 winexe
 C#
 .cs
 C:\Development\DotNet\FileDirectoriser\FileDirectoriser\obj\Debug\net6.0-windows\
-FileDirectoriser
+Fortah.FileDirectoriser
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Development\DotNet\FileDirectoriser\FileDirectoriser\App.xaml
-11407045341
-1-604888437
-14-1441285717
-2031527207112
-MainWindow.xaml;
+2365034700
+
+281691509100
+2031899591702
+About\View.xaml;Main\View.xaml;
 
 False
 

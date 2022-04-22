@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace FileDirectoriser {
+namespace Fortah.FileDirectoriser.WPF {
 	public class RelayCommand : ICommand {
 		private Action<object?> Action { get; set; }
 		private Predicate<object?>? CanExecuteAction { get; set; }

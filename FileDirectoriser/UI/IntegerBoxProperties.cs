@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 
-namespace FileDirectoriser {
+namespace Fortah.FileDirectoriser.UI {
     public class IntegerBoxProperties : DependencyObject {
         public static readonly DependencyProperty DecreaseProperty = DependencyProperty.RegisterAttached("Decrease",
             typeof(ICommand), typeof(IntegerBoxProperties), new PropertyMetadata(default(ICommand)));

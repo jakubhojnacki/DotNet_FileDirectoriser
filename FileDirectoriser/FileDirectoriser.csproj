@@ -6,26 +6,64 @@
         <UseWPF>true</UseWPF>
         <UseWindowsForms>true</UseWindowsForms>
         <ApplicationIcon>Resources\Images\Application.ico</ApplicationIcon>
+        <PackageId>Fortah.$(AssemblyName)</PackageId>
+        <RootNamespace>Fortah.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+        <Authors>Jakub Hojnacki &lt;jakubhojnacki@gmail.com&gt;</Authors>
+        <Company>Fortah</Company>
+        <Product>File Directoriser</Product>
+        <Description>Distributes files and directories to alphabetic structure of directories for better navigation</Description>
+        <PackageIcon>Application256x256.png</PackageIcon>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <FileVersion>2.0.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
         <None Remove="Resources\Images\Application.ico" />
         <None Remove="Resources\Images\Application.png" />
+        <None Remove="Resources\Images\Application24x24.png" />
+        <None Remove="Resources\Images\Application32x32.png" />
+        <None Remove="Resources\Images\Application64x64.png" />
         <None Remove="Resources\Images\MessageTypeError.png" />
+        <None Remove="Resources\Images\MessageTypeError32x32.png" />
         <None Remove="Resources\Images\MessageTypeInformation.png" />
+        <None Remove="Resources\Images\MessageTypeInformation32x32.png" />
         <None Remove="Resources\Images\MessageTypeUnknown.png" />
+        <None Remove="Resources\Images\MessageTypeUnknown32x32.png" />
         <None Remove="Resources\Images\MessageTypeWarning.png" />
+        <None Remove="Resources\Images\MessageTypeWarning32x32.png" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="Resources\Images\Application.ico" />
+        <Resource Include="Resources\Images\Application.ico" />
+        <Resource Include="Resources\Images\Application24x24.png" />
+        <Resource Include="Resources\Images\Application256x256.png" />
+        <Resource Include="Resources\Images\Application32x32.png" />
+        <Resource Include="Resources\Images\Application64x64.png" />
+        <Resource Include="Resources\Images\MessageTypeError32x32.png" />
+        <Resource Include="Resources\Images\MessageTypeInformation32x32.png" />
+        <Resource Include="Resources\Images\MessageTypeUnknown32x32.png" />
+        <Resource Include="Resources\Images\MessageTypeWarning32x32.png" />
     </ItemGroup>
 
     <ItemGroup>
-        <Resource Include="Resources\Images\Application.png" />
-        <Resource Include="Resources\Images\MessageTypeError.png" />
-        <Resource Include="Resources\Images\MessageTypeInformation.png" />
-        <Resource Include="Resources\Images\MessageTypeUnknown.png" />
-        <Resource Include="Resources\Images\MessageTypeWarning.png" />
+      <Compile Update="Resources\Texts.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Texts.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Texts.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Texts.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Resources\Images\Application256x256.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 </Project>

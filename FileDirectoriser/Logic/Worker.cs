@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace FileDirectoriser {
+namespace Fortah.FileDirectoriser.Logic {
     internal class Worker : BackgroundWorker {
         private Directoriser Directoriser { get; set; }
 
